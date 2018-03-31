@@ -5,7 +5,6 @@ var oldConsole = (console.assert ? console : oldConsole),
             oldConsole.log.call(oldConsole, arguments);
             if (arguments.callee && arguments.callee.caller && arguments.callee.caller.caller && arguments.callee.caller.caller.caller && arguments.callee.caller.caller.caller.caller && arguments.callee.caller.caller.caller.caller.prototype) {
                 oldConsole.dir.call(oldConsole, arguments.callee.caller.caller.caller.caller);
-                debugger
                 var test = arguments.callee.caller.caller.caller.caller;
                 if (test.hasOwnProperty("appId") && test.appId === "drawful2") {
                     instance = test;
